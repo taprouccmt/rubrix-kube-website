@@ -1,0 +1,256 @@
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+}
+
+/*After .hero .grid */
+.card {
+    background-color: #fff;
+    /*Add last color: #333 */
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin: 10px;
+
+}
+/*After .hero-form input:focus; */
+.btn {
+    display: inline-block; 
+    padding: 10px 30px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+/* In our html we have a class outline on the button */
+.btn-outline {
+    background-color: transparent;
+    border: solid 1px #fff;
+}
+/*Adding a hover */
+.btn:hover {
+    transform: scale(.98);
+}
+
+/* Add after .cloud .grid / Backgrounds and cloud buttons */
+.bg-primary,
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.bg-secondary,
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.bg-dark,
+.btn-dark {
+    background-color: var(--dark-color);
+    color: #fff;
+}
+.bg-light,
+.btn-light {
+    background-color: var(--light-color);
+    color: #333;
+}
+
+
+
+/*.bg-light a,
+.btn-light a {
+    background-color: var(--light-color);
+    color: #333 ;
+}*/
+
+
+
+/* add after the footer has been completly added.*/
+.bg-primary a,
+.btn-primary a,
+.bg-secondary a,
+.btn-secondary a,
+.bg-dark a,
+.btn-dark a{
+    color: #fff ;
+}
+
+/* Add Text colors after adjusting columns on Docs */
+.text-primary {
+    color: var(--primary-color);
+}
+    
+.text-secondary {
+    color: var(--secondary-color);
+    
+}
+
+.text-dark {
+    color: var(--dark-color);
+    
+}
+.text-light {
+    color: var(--light-color);
+    
+}
+
+/* Text sizes Add after .bg...,btn... */
+.lead {
+    font-size: 20px;
+}
+
+.sm {
+    font-size: 1rem;
+}
+.md {
+    font-size: 2rem;
+}
+.lg {
+    font-size: 3rem;
+}
+.xl {
+    font-size: 4rem;
+}
+
+
+/* After .grid-3 property is added */
+ .text-center {
+    text-align: center;
+ }  
+ 
+ /* Alert */
+ .alert {
+    background-color: var(--light-color);
+    padding: 10px 20px;
+    font-weight: bold;
+    margin: 15px 0;
+ }
+
+ .alert i {
+    margin-right: 10px;
+ }
+
+ .alert-success {
+    background-color: var(--success-color);
+    color: #fff;
+ }
+
+ .alert-error {
+    background-color: var(--error-color);
+    color: #fff;
+ }
+
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    /*grid-template-columns: 300px 200px;*/
+    /* You can do percentages perferably or fractions i.e. 2fr 1fr of the total space.*/
+    /*grid-template-columns: 2fr 1fr;*/
+    /*grid-template-columns: 1fr 1fr;*/
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; 
+    justify-content: center;
+    align-items: center;
+    /*Address height of container */ 
+    height: 100%;
+
+}
+
+/* Stats add .grid-3 for 3 columns */
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+/* After .grid-3 Create a utilities.css file from original stylesheet.css */
+/* Margin after .text-align between .btn:hover and .flex */
+
+/* Margin for are my- */
+/* rem unit is a css unity is amultiplier of the root elements (html tag) font size. If the root font size say html was 16px it would be 16px x (1)rem*/ 
+.my-1 {
+    margin: 1rem 0;
+}
+.my-2 {
+    margin: 1.5rem 0;
+}
+.my-2 {
+    margin: 1.5rem 0;
+}
+.my-3 {
+    margin: 2rem 0; /* 16px x 2rem = 32px */
+}
+.my-4 {
+    margin: 3rem 0;
+}
+.my-5 {
+    margin: 4rem 0;
+}
+/* Places where we need margin all around (Remove 0 0n copy paste)*/
+.m-1 {
+    margin: 1rem;
+}
+.m-2 {
+    margin: 1.5rem;
+}
+.m-2 {
+    margin: 1.5rem;
+}
+.m-3 {
+    margin: 2rem; /* 16px x 2rem = 32px */
+}
+.m-4 {
+    margin: 3rem;
+}
+.m-5 {
+    margin: 4rem;
+}
+
+/* Padding for are py- */
+/* rem unit is a css unity is amultiplier of the root elements (html tag) font size. If the root font size say html was 16px it would be 16px x (1)rem*/ 
+.py-1 {
+    margin: 1rem 0;
+}
+.py-2 {
+    padding: 1.5rem 0;
+}
+.py-2 {
+    padding: 1.5rem 0;
+}
+.py-3 {
+    padding: 2rem 0; /* i.e. 16px x 2rem = 32px */
+}
+.py-4 {
+    padding: 3rem 0;
+}
+.py-5 {
+    padding: 4rem 0;
+}
+/* Places where we need padding all around (Remove 0 0n copy paste)*/
+.p-1 {
+    padding: 1rem;
+}
+.p-2 {
+    padding: 1.5rem;
+}
+.p-2 {
+    padding: 1.5rem;
+}
+.p-3 {
+    padding: 2rem; /* 16px x 2rem = 32px */
+}
+.p-4 {
+    padding: 3rem;
+}
+.p-5 {
+    padding: 4rem;
+}
+/*Setting these allows us to use padding on elements where we decide without creating over and over again. */

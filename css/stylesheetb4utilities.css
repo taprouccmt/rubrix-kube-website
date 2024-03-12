@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap')
+;
+
+/* Add this whwn discusing background to hero */
+:root {
+    --primary-color: #d3135a;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0; 
+    margin: 0;
+
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #333333;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    columns: #333;
+}
+
+h1,
+h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+img {
+
+    width: 100%;
+}
+
+/* Start navbar after. flex */
+
+/* Add this initial without var
+.navbar {
+
+ background-color: #d3135a;
+ color: #fff;
+ height: 70px;
+}
+*/
+.navbar {
+
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 70px;
+   }
+/* Show after .navbar .flex */
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover {
+    border-bottom: solid 2px #fff;
+}
+
+/* Show the .flex first*/
+.navbar .flex {
+    justify-content: space-between;
+}
+
+/* Hero */
+.hero {
+    height: 400px;
+    background-color: var(--primary-color) ;
+    color: #fff;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+.hero p {
+    margin: 20px 0;
+}
+
+/* After adding height to .grid: 100& */
+.hero .grid {
+    /* Add overflow: visable; after .hero-form height: 350px; */
+    overflow: visible;
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+}
+
+/*After adding .card */
+.hero-form {
+    /*position relative because of adding a top property */
+    position: relative;
+    top: 60px;
+    height: 350px;
+    /* Add after overflow: visable; */
+    width: 400px;
+    padding: 40px;
+    /* Set the z-index: 100 so that it always stay in front */ 
+    z-index: 100;
+}
+
+/* Add after .card - z-index: 100; */
+/* controls the form elements */
+.hero-form .form-control {
+    margin: 30px 0;
+}
+.hero-form input[type='text'],
+.hero-form input[type='email'] {
+    border: 0;
+    border-bottom: solid 1px #ccc;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+.hero-form input:focus {
+    outline: none;
+}
+/* After adding .btn:hover */
+.hero::before,
+.hero::after {
+    content: '';
+    /*The .hero has a position relative. position: absolute; will be based on the .hero position*/ 
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    transform: skewY(-5deg);
+    -webkit-transform: skewY(-5deg);
+    -moz-transform: skewY(-5deg);
+    -ms-transform: skewY(-5deg);
+}
+
+/* Stats */
+.stats {
+    padding-top: 140px;
+}
+
+
+/* Utilities */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+}
+
+/*After .hero .grid */
+.card {
+    background-color: #fff;
+    /*Add last color: #333 */
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin: 10px;
+
+}
+/*After .hero-form input:focus; */
+.btn {
+    display: inline-block; 
+    padding: 10px 30px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+/* In our html we have a class outline on the button */
+.btn-outline {
+    background-color: transparent;
+    border: solid 1px #fff;
+}
+/*Adding a hover */
+.btn:hover {
+    transform: scale(.98);
+}
+    
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    /*grid-template-columns: 300px 200px;*/
+    /* You can do percentages perferably or fractions i.e. 2fr 1fr of the total space.*/
+    /*grid-template-columns: 2fr 1fr;*/
+    /*grid-template-columns: 1fr 1fr;*/
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; 
+    justify-content: center;
+    align-items: center;
+    /*Address height of container */ 
+    height: 100%;
+
+}
+
+/* Stats add .grid-3 for 3 columns */
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+/* After .grid-3 Create a utilities.css file */
