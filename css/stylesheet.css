@@ -57,6 +57,11 @@ code, pre {
     padding: 10px;
 }
 
+.hidden {
+    visibility: hidden;
+    height: 0;
+}
+
 /* Start navbar after .flex*/
 
 /* Add this initial without var
